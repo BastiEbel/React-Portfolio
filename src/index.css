@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Inter";
+  src: local("Inter-VariableFont");
+  url: ("./fonts/Inter/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background: #141d2f;
+  height: 100vh;
+}
