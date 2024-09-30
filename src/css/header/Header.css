@@ -1,0 +1,64 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.container-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 297px;
+}
+
+.container-header h1 {
+  text-wrap: nowrap;
+  rotate: -90deg;
+  color: white;
+  font-size: 90px;
+}
+
+.container-header button {
+  width: 165px;
+  height: 58px;
+  border-radius: 10px;
+  padding: 15px, 30px, 15px, 30px;
+  background-color: #70e61c;
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.container-header button:hover {
+  cursor: pointer;
+  background-color: #9747ff;
+}
+
+.header-name {
+  font-size: 128px;
+  color: white;
+}
+
+.header-job {
+  color: #9747ff;
+  font-size: 64px;
+}
+
+.contact-section {
+  width: 100px;
+  height: 4px;
+  background-color: #70e61c;
+  margin-right: 24px;
+}
+
+.icons {
+  width: 30px;
+  height: 30px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
