@@ -1,11 +1,14 @@
 @font-face {
-  font-family: "Inter";
-  src: local("Inter-VariableFont");
-  url: ("./fonts/Inter/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  font-family: "Poppins";
+  src: local("Poppins"),
+    url("./assets/fonts/Poppins-Regular.ttf") format("truetype");
 }
 
 body {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #141d2f;
   height: 100vh;
+}
+.font-color {
+  color: #ffffff;
 }

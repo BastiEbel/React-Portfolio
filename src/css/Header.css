@@ -21,9 +21,14 @@
   rotate: -90deg;
   color: white;
   font-size: 90px;
+  line-height: 108px;
+  font-weight: 400;
 }
 
 .container-header button {
+  position: absolute;
+  top: 296px;
+  left: 637px;
   width: 165px;
   height: 58px;
   border-radius: 10px;
@@ -32,15 +37,20 @@
   color: #ffffff;
   font-size: 23px;
   font-weight: 400;
+  transition: ease-in-out 250ms;
 }
 
 .container-header button:hover {
   cursor: pointer;
   background-color: #9747ff;
+  width: 195px;
+  height: 68px;
 }
 
 .header-name {
+  font-weight: 700;
   font-size: 128px;
+  line-height: 153.6px;
   color: white;
 }
 

@@ -1,4 +1,4 @@
-import "../css/header/Header.css";
+import "../css/Header.css";
 import purpleImg from "../assets/logos/Purple_shadow.png";
 import greenImg from "../assets/logos/Purple shadow@2x.png";
 import gitHub from "../assets/logos/Github button.png";

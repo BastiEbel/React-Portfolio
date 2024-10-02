@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import profilLogo from "../assets/logos/logo-white.png";
 import { Link } from "react-scroll";
-import "../css/navbar/Navbar.css";
+import "../css/Navbar.css";
 
 function Navbar() {
   const [nav, setNav] = useState(false);
