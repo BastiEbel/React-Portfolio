@@ -1,0 +1,21 @@
+.spacer {
+  position: absolute;
+  bottom: 265px;
+  width: 100%;
+  height: 148px;
+  background-color: #141d2f;
+  border-bottom-right-radius: 3400px 500px;
+  border-bottom-left-radius: 300px 20px;
+}
+.skill-container {
+  position: relative;
+  background: linear-gradient(
+    228.04deg,
+    #1a2743 94.09%,
+    #27334b 123.2%,
+    #212d43 142.98%,
+    #1e283d 164.44%,
+    #141d2f 220.64%
+  );
+  height: 100vh;
+}

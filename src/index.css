@@ -8,6 +8,7 @@ body {
   font-family: "Poppins", sans-serif;
   background: #141d2f;
   height: 100vh;
+  margin: 0;
 }
 .font-color {
   color: #ffffff;

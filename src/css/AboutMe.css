@@ -1,62 +1,78 @@
-.overall-container {
-  position: relative;
+.overall {
+  width: 100%;
+  position: absolute;
+  background: #141d2f;
+  z-index: 1;
 }
 
-.container-aboutme {
+.container-me {
   position: relative;
+  bottom: -100px;
+}
+
+.container-me p {
+  margin: 0;
+  width: 452px;
+  height: 108px;
+  margin-left: 100px;
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.about-me {
+  display: flex;
+  margin-left: 100px;
+  width: 471px;
+  height: 114px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.container-explain {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 471px;
-  height: 336px;
-  left: 100px;
-  gap: 35px;
-}
-
-h3 {
-  position: relative;
-  left: 100px;
-  font-family: Poppins;
-  font-size: 90px;
-  font-weight: 700;
-  line-height: 108px;
-  text-align: left;
-  color: #ffffff;
-  margin-bottom: 32px;
+  align-items: flex-start;
+  margin-left: 100px;
+  margin-top: 50px;
 }
 
 .explain {
-  font-family: Poppins;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 19.2px;
-  text-align: left;
-}
-
-.container-section {
   display: flex;
-  margin-top: 32px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0;
+  width: 444px;
+  gap: 35px;
 }
 
-.container-section img {
-  margin-right: 32px;
-  width: 50px;
+.explain img {
   height: 50px;
 }
 
-.profil-Img {
-  z-index: 2;
-  position: absolute;
-  width: 593px;
-  height: 647px;
-  top: 0px;
-  right: 0px;
+.explain span {
+  width: 350px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #ffffff;
 }
 
-.bg-Img {
+.bg-photo {
   position: absolute;
-  width: 634px;
-  height: 616.57px;
+  width: 610px;
+  height: 553.57px;
+  right: 0;
   top: 100px;
-  right: -50px;
+}
+
+.profil-pic {
+  position: absolute;
+  height: 647px;
+  bottom: -100px;
+  border-bottom-right-radius: 340px 129px;
+  right: 0;
 }
