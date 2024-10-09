@@ -1,17 +1,15 @@
 .overall {
   width: 100%;
-  position: absolute;
-  background: #141d2f;
+  position: relative;
   z-index: 1;
 }
 
-.container-me {
+/* .container-me {
   position: relative;
   bottom: -100px;
-}
+} */
 
 .container-me p {
-  margin: 0;
   width: 452px;
   height: 108px;
   margin-left: 100px;
@@ -66,7 +64,7 @@
   width: 610px;
   height: 553.57px;
   right: 0;
-  top: 100px;
+  top: 200px;
 }
 
 .profil-pic {
