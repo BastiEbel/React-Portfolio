@@ -1,11 +1,9 @@
 .skill-container {
   background: linear-gradient(
-    228.04deg,
-    #1a2743,
-    #27334b,
-    #212d43,
-    #1e283d,
-    #141d2f
+    186.63deg,
+    #1a2743 20.48%,
+    #1e283d 26.91%,
+    #141d2f 44.64%
   );
 }
 
@@ -15,6 +13,12 @@
   background-color: #141d2f;
   border-bottom-right-radius: 3400px 500px;
   border-bottom-left-radius: 300px 20px;
+}
+
+.overall-skills {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .icon-container {
@@ -38,4 +42,56 @@
   width: 88px;
   height: 100px;
   gap: 10px;
+}
+
+.skill-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 572px;
+  height: 286px;
+}
+
+.skill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill p {
+  margin: unset;
+  font-size: 90px;
+  font-weight: 700;
+  line-height: 108px;
+  color: #ffffff;
+}
+
+.section-p {
+  width: 471px;
+  height: 38px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  color: #ffffff;
+}
+
+.skill-section button {
+  position: absolute;
+  top: 200px;
+  width: 200px;
+  height: 58px;
+  border-radius: 10px;
+  padding: 15px 30px 15px 30px;
+  background-color: #70e61c;
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 400;
+  transition: ease-in-out 250ms;
+}
+
+.skill-section button:hover {
+  cursor: pointer;
+  background-color: #9747ff;
+  width: 240px;
+  height: 68px;
 }
