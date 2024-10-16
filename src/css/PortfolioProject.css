@@ -1,0 +1,72 @@
+section {
+  width: 572px;
+  height: 181px;
+}
+
+.oversign {
+  display: inline-flex;
+  align-items: center;
+}
+
+.oversign h3 {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 108px;
+  margin: unset;
+}
+
+.oversign span {
+  width: 50px;
+  height: 0px;
+  border: 4px solid #9747ff;
+  border-radius: 5px;
+  margin-right: 49px;
+}
+
+section p {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  margin-left: 99px;
+}
+.side-logo {
+  position: absolute;
+  top: 2425px;
+  right: 0;
+  width: 489.65px;
+  height: 608.26px;
+}
+
+.project-overview {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-container {
+  z-index: 1;
+  width: 603px;
+  height: 603px;
+  margin: 10px;
+  border-radius: 15px;
+  border: 1px solid #70e61c;
+  background-color: #141d2f;
+}
+
+.project-container img {
+  object-fit: cover;
+  width: 600px;
+  height: 600px;
+  border-radius: 15px;
+}
+
+@media (max-width: 1280px) {
+  .side-logo {
+    width: 389.65px;
+  }
+}
