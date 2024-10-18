@@ -1,4 +1,5 @@
 import blueshadow from "../assets/logos/Blue_shadow.png";
+import greenshadow from "../assets/logos/Green shadow.png";
 import project from "../util/project.js";
 import "../css/PortfolioProject.css";
 
@@ -19,10 +20,41 @@ export default function PortfolioProject() {
       <div className="project-overview">
         {project.map((singleProject) => (
           <div className="project-container" key={singleProject.id}>
-            <img src={singleProject.img} alt={singleProject.id} />
+            <img
+              className="project-image"
+              src={singleProject.img}
+              alt={singleProject.id}
+            />
+            <div className="project-hover">
+              <div className="btn-container">
+                <a
+                  className="btn-github"
+                  target="_blank"
+                  href={singleProject.links.github}
+                >
+                  Github
+                </a>
+                <a
+                  className="btn-site"
+                  target="_blank"
+                  href={singleProject.links.site}
+                >
+                  Live test
+                </a>
+              </div>
+              <div className="description-container">
+                <span>{singleProject.description}</span>
+                <p>{singleProject.skills}</p>
+              </div>
+            </div>
           </div>
         ))}
       </div>
+      <img
+        className="side-logo-green"
+        src={greenshadow}
+        alt="Grenn Shadow logo"
+      />
     </div>
   );
 }

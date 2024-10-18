@@ -4,8 +4,12 @@
   align-items: center;
   padding: 20px;
   background-color: #141d2f;
-  position: relative;
-  height: 110px;
+  position: fixed;
+  height: 100px;
+  z-index: 4;
+  top: 0px;
+  left: 0px;
+  right: 0px;
 }
 
 .logo {

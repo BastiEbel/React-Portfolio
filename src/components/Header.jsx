@@ -22,17 +22,13 @@ export default function Header() {
         </div>
         <img src={greenImg} alt="Green Image" />
       </div>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          width: "380px",
-        }}
-      >
+      <div className="container-links">
         <div className="contact-section"></div>
-        <img src={gitHub} alt="Git Hub" className="icons" />
-        <img src={mail} alt="EMail" className="icons" />
-        <img src={linkIn} alt="LinkIn" className="icons" />
+        <div className="link-section">
+          <img src={gitHub} alt="Git Hub" className="icons-links" />
+          <img src={mail} alt="EMail" className="icons-links" />
+          <img src={linkIn} alt="LinkIn" className="icons-links" />
+        </div>
       </div>
     </>
   );
