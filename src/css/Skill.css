@@ -96,3 +96,72 @@
   width: 240px;
   height: 68px;
 }
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+  .icon-container {
+    margin-left: 50px; /* Reduce left margin */
+    width: 80%; /* Use percentage for width */
+    height: auto; /* Allow height to adjust */
+  }
+
+  .skill-section {
+    width: 90%; /* Use percentage for width */
+  }
+
+  .skill p {
+    font-size: 70px; /* Adjust font size for smaller screens */
+    line-height: 80px; /* Adjust line height */
+  }
+
+  .section-p {
+    width: 80%; /* Use percentage for width */
+  }
+}
+
+@media (max-width: 768px) {
+  .icon-container {
+    flex-direction: column; /* Stack icons vertically */
+    align-items: center; /* Center align */
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .icons img {
+    width: 70px; /* Adjust image width */
+    height: 80px; /* Adjust image height */
+  }
+
+  .skill-section {
+    width: 100%; /* Use full width */
+  }
+
+  .skill p {
+    font-size: 50px; /* Further adjust font size */
+    line-height: 60px; /* Further adjust line height */
+  }
+
+  .section-p {
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .skill-section button {
+    width: 150px; /* Adjust button width */
+    font-size: 20px; /* Adjust button font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .skill p {
+    font-size: 40px; /* Further adjust font size for very small screens */
+    line-height: 50px; /* Further adjust line height */
+  }
+
+  .section-p {
+    font-size: 12px; /* Further adjust font size */
+  }
+
+  .skill-section button {
+    width: 120px; /* Further adjust button width */
+    font-size: 18px; /* Further adjust button font size */
+  }
+}

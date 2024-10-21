@@ -69,3 +69,36 @@
   border-bottom-right-radius: 340px 129px;
   right: 0;
 }
+
+/* Media Queries for additional responsiveness */
+@media (max-width: 768px) {
+  .container-me p,
+  .about-me,
+  .explain span {
+    font-size: 5vw; /* Adjust font size for smaller screens */
+  }
+
+  .bg-photo {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .profil-pic {
+    max-height: 60vh; /* Adjust max height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .container-me p,
+  .about-me,
+  .explain span {
+    font-size: 6vw; /* Further adjust font size for very small screens */
+  }
+
+  .bg-photo {
+    width: 95%; /* Further adjust width for very small screens */
+  }
+
+  .profil-pic {
+    max-height: 50vh; /* Further adjust max height for very small screens */
+  }
+}

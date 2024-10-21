@@ -1,0 +1,75 @@
+.footerContainer {
+  position: relative;
+  top: 466px;
+  width: 100%;
+  height: 291px;
+  border-top: 4px solid #70e61c;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-impressum {
+  width: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.footer-impressum img {
+  height: 80px;
+}
+
+.footer-impressum a {
+  margin-top: 8px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+}
+
+.footerContainer p {
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 27.6px;
+}
+
+.footer-link {
+  width: 174px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-right: 50px;
+}
+
+/* Media Queries for additional responsiveness */
+@media (max-width: 768px) {
+  .footerContainer {
+    flex-direction: column; /* Stack items on smaller screens */
+    align-items: center; /* Center align */
+  }
+
+  .footer-impressum {
+    margin-left: 0; /* Remove left margin on smaller screens */
+  }
+
+  .footer-link {
+    margin-right: 0; /* Remove right margin on smaller screens */
+    margin-top: 1vh; /* Add top margin for spacing */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-impressum a {
+    font-size: 3.5vw; /* Further adjust font size for very small screens */
+  }
+
+  .footerContainer p {
+    font-size: 4vw; /* Further adjust font size for very small screens */
+  }
+}

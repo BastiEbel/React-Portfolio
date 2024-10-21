@@ -189,3 +189,29 @@ section p {
     width: 389.65px;
   }
 }
+
+/* Media Queries for additional responsiveness */
+@media (max-width: 768px) {
+  .side-logo {
+    width: 30vw; /* Adjust width for smaller screens */
+  }
+
+  .side-logo-green {
+    width: 30vw; /* Adjust width for smaller screens */
+  }
+
+  .btn-container {
+    flex-direction: column; /* Stack buttons on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .oversign h3 {
+    font-size: 6vw; /* Further adjust font size for very small screens */
+  }
+
+  .description-container span,
+  .description-container p {
+    font-size: 5vw; /* Further adjust font size for very small screens */
+  }
+}

@@ -11,7 +11,7 @@ export default function Header() {
       <div className="container">
         <img src={purpleImg} alt="Purple Image" />
         <div className="container-header">
-          <div style={{ display: "flex" }}>
+          <div className="header">
             <h1>I am</h1>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <span className="header-name">Sebastian Ebel</span>
