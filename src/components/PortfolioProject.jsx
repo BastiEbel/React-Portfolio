@@ -43,6 +43,7 @@ export default function PortfolioProject() {
                 </a>
               </div>
               <div className="description-container">
+                <h4>{singleProject.title}</h4>
                 <span>{singleProject.description}</span>
                 <p>{singleProject.skills}</p>
               </div>

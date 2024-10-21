@@ -161,13 +161,20 @@ section p {
 .description-container {
   display: inline-flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: column;
   height: 353px;
   width: 603px;
   background-color: #ffffff;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
+}
+
+.description-container h4 {
+  color: #9747ff;
+  margin: 16px 0px 16px 0px;
+  font-size: 38px;
+  font-weight: bolder;
 }
 
 .description-container span {
@@ -178,7 +185,7 @@ section p {
 }
 
 .description-container p {
-  margin: 0px 32px 0px 32px;
+  margin: 32px 32px 32px 32px;
   color: #70e61c;
   font-size: 21px;
   font-weight: 400;
