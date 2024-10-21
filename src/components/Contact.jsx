@@ -55,17 +55,14 @@ export default function Contact() {
           </span>
           <button disabled={true}>Send Message :)</button>
         </form>
-      </section>
-      <div className="image-corner">
-        <img src={purpleCorner} alt="Purple Corner" />
-      </div>
-      <div className="scrollTopArrow">
+        <img className="image-corner" src={purpleCorner} alt="Purple Corner" />
+
         <img
-          className="arrowLogo"
+          className="scrollTopArrow"
           src={scrollTopArrow}
           alt="Arrow Scroll Top"
         />
-      </div>
+      </section>
     </div>
   );
 }
