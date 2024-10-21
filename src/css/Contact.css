@@ -80,7 +80,7 @@ form {
   width: 617px;
   height: 504px;
   top: 90%;
-  right: 4%;
+  right: -4%;
   gap: 32px;
   position: relative;
 }
