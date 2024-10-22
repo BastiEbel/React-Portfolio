@@ -8,12 +8,12 @@ import rest from "../assets/logos/Rest API.png";
 import ts from "../assets/logos/Ts.png";
 import css from "../assets/logos/CSS.png";
 import html from "../assets/logos/html.png";
+
 import { FaReact } from "react-icons/fa";
 
 export default function Skill() {
   return (
     <div className="skill-container">
-      <div className="spacer"></div>
       <div className="overall-skills">
         <div className="icon-container">
           <div className="icons">

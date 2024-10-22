@@ -1,18 +1,7 @@
 .skill-container {
-  background: linear-gradient(
-    186.63deg,
-    #1a2743 20.48%,
-    #1e283d 26.91%,
-    #141d2f 44.64%
-  );
-}
-
-.spacer {
-  width: 100%;
-  height: 148px;
-  background-color: #141d2f;
-  border-bottom-right-radius: 3400px 500px;
-  border-bottom-left-radius: 300px 20px;
+  position: relative;
+  top: -74px;
+  z-index: 1;
 }
 
 .overall-skills {
@@ -97,71 +86,70 @@
   height: 68px;
 }
 
-/* Media Queries for responsiveness */
 @media (max-width: 1024px) {
   .icon-container {
-    margin-left: 50px; /* Reduce left margin */
-    width: 80%; /* Use percentage for width */
-    height: auto; /* Allow height to adjust */
+    margin-left: 50px;
+    width: 80%;
+    height: auto;
   }
 
   .skill-section {
-    width: 90%; /* Use percentage for width */
+    width: 90%;
   }
 
   .skill p {
-    font-size: 70px; /* Adjust font size for smaller screens */
-    line-height: 80px; /* Adjust line height */
+    font-size: 70px;
+    line-height: 80px;
   }
 
   .section-p {
-    width: 80%; /* Use percentage for width */
+    width: 80%;
   }
 }
 
 @media (max-width: 768px) {
   .icon-container {
-    flex-direction: column; /* Stack icons vertically */
-    align-items: center; /* Center align */
-    margin-left: 0; /* Remove left margin */
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
   }
 
   .icons img {
-    width: 70px; /* Adjust image width */
-    height: 80px; /* Adjust image height */
+    width: 70px;
+    height: 80px;
   }
 
   .skill-section {
-    width: 100%; /* Use full width */
+    width: 100%;
   }
 
   .skill p {
-    font-size: 50px; /* Further adjust font size */
-    line-height: 60px; /* Further adjust line height */
+    font-size: 50px;
+    line-height: 60px;
   }
 
   .section-p {
-    font-size: 14px; /* Adjust font size */
+    font-size: 14px;
   }
 
   .skill-section button {
-    width: 150px; /* Adjust button width */
-    font-size: 20px; /* Adjust button font size */
+    width: 150px;
+    font-size: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .skill p {
-    font-size: 40px; /* Further adjust font size for very small screens */
-    line-height: 50px; /* Further adjust line height */
+    font-size: 40px;
+    line-height: 50px;
   }
 
   .section-p {
-    font-size: 12px; /* Further adjust font size */
+    font-size: 12px;
   }
 
   .skill-section button {
-    width: 120px; /* Further adjust button width */
-    font-size: 18px; /* Further adjust button font size */
+    width: 120px;
+    font-size: 18px;
   }
 }

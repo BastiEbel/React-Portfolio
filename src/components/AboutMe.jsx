@@ -3,6 +3,7 @@ import bulb from "../assets/logos/bulb desktop.png";
 import puzzle from "../assets/logos/puzzle desktop white.png";
 import bgProfil from "../assets/logos/Photo shadows.png";
 import profil from "../assets/image/hero character photo.png";
+import spacer from "../assets/logos/Vector.png";
 
 export default function AboutMe() {
   return (
@@ -40,6 +41,7 @@ export default function AboutMe() {
       </div>
       <img src={bgProfil} className="bg-photo" />
       <img className="profil-pic" src={profil} alt="" />
+      <img className="spacer" src={spacer} alt="Spacer" />
     </div>
   );
 }

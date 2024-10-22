@@ -4,6 +4,12 @@
   z-index: 1;
 }
 
+.container-me {
+  z-index: 0;
+  height: 800px;
+  position: relative;
+}
+
 .container-me p {
   width: 452px;
   height: 108px;
@@ -12,6 +18,7 @@
   font-size: 90px;
   line-height: 1.2;
   color: #ffffff;
+  margin-bottom: 64px;
 }
 
 .about-me {
@@ -59,31 +66,39 @@
   width: 610px;
   height: 553.57px;
   right: 0;
-  top: 200px;
+  top: 175px;
 }
 
 .profil-pic {
   position: absolute;
+  width: 593px;
   height: 647px;
-  bottom: -100px;
-  border-bottom-right-radius: 340px 129px;
+  top: 52px;
+  right: 0px;
+}
+
+.spacer {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 878.5px;
+  top: 545px;
   right: 0;
 }
 
-/* Media Queries for additional responsiveness */
 @media (max-width: 768px) {
   .container-me p,
   .about-me,
   .explain span {
-    font-size: 5vw; /* Adjust font size for smaller screens */
+    font-size: 5vw;
   }
 
   .bg-photo {
-    width: 90%; /* Adjust width for smaller screens */
+    width: 90%;
   }
 
   .profil-pic {
-    max-height: 60vh; /* Adjust max height for smaller screens */
+    max-height: 60vh;
   }
 }
 
@@ -91,14 +106,14 @@
   .container-me p,
   .about-me,
   .explain span {
-    font-size: 6vw; /* Further adjust font size for very small screens */
+    font-size: 6vw;
   }
 
   .bg-photo {
-    width: 95%; /* Further adjust width for very small screens */
+    width: 95%;
   }
 
   .profil-pic {
-    max-height: 50vh; /* Further adjust max height for very small screens */
+    max-height: 50vh;
   }
 }
