@@ -95,6 +95,10 @@ form {
   border-radius: 10px;
   border: 1px solid #9747ff;
   box-sizing: border-box;
+
+  &:hover {
+    border: 1px solid #70e61c;
+  }
 }
 
 .textArea {
@@ -123,7 +127,7 @@ form {
 }
 
 .custom-checkbox input:checked + .checkmark {
-  background-color: #797ef3;
+  background-color: #141d2f;
 }
 
 .checkmark:after {
@@ -134,11 +138,12 @@ form {
 
 .custom-checkbox input:checked + .checkmark:after {
   display: block;
+  border-color: #70e61c;
 }
 
 .checkmark:after {
-  left: 7px;
-  top: 3px;
+  left: 5px;
+  top: 1px;
   width: 5px;
   height: 10px;
   border: solid white;
@@ -176,6 +181,7 @@ form button {
   font-size: 23px;
   font-weight: 400;
   line-height: 27.6px;
+  background-color: #70e61c;
 }
 
 form button:disabled {
