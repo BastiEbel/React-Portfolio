@@ -10,6 +10,19 @@ body {
   margin: 0;
   scroll-behavior: smooth;
 }
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #141d2f;
+}
+
 .font-color {
   color: #ffffff;
 }

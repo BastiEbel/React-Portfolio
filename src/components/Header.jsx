@@ -4,6 +4,7 @@ import greenImg from "../assets/logos/Purple shadow@2x.png";
 import gitHub from "../assets/logos/Github button.png";
 import mail from "../assets/logos/Email button.png";
 import linkIn from "../assets/logos/Linkedin button.png";
+import scrollArrow from "../assets/logos/arrow-down-line.png";
 import { Link } from "react-scroll";
 
 export default function Header() {
@@ -33,6 +34,12 @@ export default function Header() {
           <img src={linkIn} alt="LinkIn" className="icons-links" />
         </div>
       </div>
+      <Link to="about" smooth={true} offset={-225}>
+        <div className="scrollSection">
+          <span>Scroll down</span>
+          <img src={scrollArrow} alt="Arrow" />
+        </div>
+      </Link>
     </>
   );
 }

@@ -1,5 +1,6 @@
 .container {
   width: 100%;
+  height: 800px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -93,4 +94,56 @@
 .icons-links:hover {
   cursor: pointer;
   scale: 1.25;
+}
+
+.scrollSection {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 28px;
+  height: 160px;
+  top: 747px;
+  right: 100px;
+  transition: transform 0.225s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+
+    img {
+      animation: jump 0.5s ease-in-out;
+    }
+  }
+}
+
+.scrollSection span {
+  color: #ffffff;
+  width: 133px;
+  height: 28px;
+  rotate: 90deg;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 27.6px;
+}
+
+.scrollSection img {
+  rotate: 180deg;
+  width: 24px;
+  height: 24px;
+}
+
+@keyframes jump {
+  0% {
+    transform: translate(0);
+  }
+  30% {
+    transform: translateY(-40px);
+  }
+  60% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
