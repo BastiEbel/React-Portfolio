@@ -1,6 +1,7 @@
 import "../css/Skill.css";
 import { FaReact } from "react-icons/fa";
 import mySkills from "../util/skills";
+import { Link } from "react-scroll";
 
 export default function Skill() {
   return (
@@ -60,7 +61,9 @@ export default function Skill() {
             I have gained experience in building projects with various front end
             technologies and concepts.
           </p>
-          <button>Get in touch</button>
+          <Link smooth={true} offset={80} to="contact">
+            <button>Get in touch</button>
+          </Link>
         </div>
       </div>
     </div>

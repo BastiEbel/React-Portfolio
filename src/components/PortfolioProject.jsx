@@ -5,7 +5,7 @@ import "../css/PortfolioProject.css";
 
 export default function PortfolioProject() {
   return (
-    <div>
+    <div id="portfolio">
       <section>
         <div className="oversign">
           <span></span>

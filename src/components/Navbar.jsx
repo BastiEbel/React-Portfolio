@@ -20,17 +20,17 @@ function Navbar() {
       <img src={profilLogo} alt="S.Ebel" className="logo" />
       <ul className="nav-links">
         <li>
-          <Link to="about" smooth={true} offset={50} duration={500}>
+          <Link to="about" smooth={true} offset={-150} duration={500}>
             About
           </Link>
         </li>
         <li>
-          <Link to="portfolio" smooth={true} offset={50} duration={500}>
+          <Link to="portfolio" smooth={true} offset={-150} duration={500}>
             Portfolio
           </Link>
         </li>
         <li>
-          <Link to="contact" smooth={true} offset={50} duration={500}>
+          <Link to="contact" smooth={true} offset={80} duration={500}>
             Contact
           </Link>
         </li>

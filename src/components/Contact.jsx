@@ -2,10 +2,11 @@ import "../css/Contact.css";
 import purpleCorner from "../assets/logos/Purple shadow 2.png";
 import scrollTopArrow from "../assets/logos/arrow-down-line.png";
 import Input from "../ui/Input";
+import { Link } from "react-scroll";
 
 export default function Contact() {
   return (
-    <div className="contact-container">
+    <div id="contact" className="contact-container">
       <section className="contact-oversign">
         <h1>Contact</h1>
         <span></span>
@@ -56,12 +57,9 @@ export default function Contact() {
           <button disabled={true}>Send Message :)</button>
         </form>
         <img className="image-corner" src={purpleCorner} alt="Purple Corner" />
-
-        <img
-          className="scrollTopArrow"
-          src={scrollTopArrow}
-          alt="Arrow Scroll Top"
-        />
+        <Link smooth={true} className="scrollTopArrow" to="header">
+          <img src={scrollTopArrow} alt="Arrow Scroll Top" />
+        </Link>
       </section>
     </div>
   );

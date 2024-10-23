@@ -7,7 +7,7 @@ import spacer from "../assets/logos/Vector.png";
 
 export default function AboutMe() {
   return (
-    <div className="overall">
+    <div id="about" className="overall">
       <div className="container-me">
         <p className="over-sign">About me</p>
         <span className="about-me">

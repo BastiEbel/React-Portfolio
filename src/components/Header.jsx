@@ -4,11 +4,12 @@ import greenImg from "../assets/logos/Purple shadow@2x.png";
 import gitHub from "../assets/logos/Github button.png";
 import mail from "../assets/logos/Email button.png";
 import linkIn from "../assets/logos/Linkedin button.png";
+import { Link } from "react-scroll";
 
 export default function Header() {
   return (
     <>
-      <div className="container">
+      <div id="header" className="container">
         <img src={purpleImg} alt="Purple Image" />
         <div className="container-header">
           <div className="header">
@@ -18,7 +19,9 @@ export default function Header() {
               <span className="header-job">FRONTEND DEVELOPER</span>
             </div>
           </div>
-          <button>Let&apos;s Talk</button>
+          <Link smooth={true} offset={80} to="contact">
+            <button>Let&apos;s Talk</button>
+          </Link>
         </div>
         <img src={greenImg} alt="Green Image" />
       </div>
