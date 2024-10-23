@@ -1,15 +1,6 @@
 import "../css/Skill.css";
-import js from "../assets/logos/Js.png";
-import git from "../assets/logos/Git.png";
-import scrum from "../assets/logos/Scrum.png";
-import angular from "../assets/logos/Angular.png";
-import firebase from "../assets/logos/Firebase.png";
-import rest from "../assets/logos/Rest API.png";
-import ts from "../assets/logos/Ts.png";
-import css from "../assets/logos/CSS.png";
-import html from "../assets/logos/html.png";
-
 import { FaReact } from "react-icons/fa";
+import mySkills from "../util/skills";
 
 export default function Skill() {
   return (
@@ -17,29 +8,40 @@ export default function Skill() {
       <div className="overall-skills">
         <div className="icon-container">
           <div className="icons">
-            <img src={js} alt="JS" />
-            <img src={git} alt="Git" />
-            <img src={scrum} alt="Scrum" />
-            <FaReact
-              style={{
-                color: "white",
-                width: "88px",
-                height: "100px",
-                gap: "10px",
-              }}
-            />
+            {mySkills.slice(0, 3).map((singleSkill) => (
+              <div className="singleIcon" key={singleSkill.id}>
+                <img src={singleSkill.icon} alt={singleSkill.title} />
+                <p>{singleSkill.title}</p>
+              </div>
+            ))}
+            <div className="singleIcon">
+              <FaReact className="image" />
+              <p>React</p>
+            </div>
           </div>
           <div className="icons">
-            <img src={angular} alt="Angular" />
-            <img src={firebase} alt="Firebase" />
-            <img src={rest} alt="Rest API" />
+            {mySkills.slice(3, 6).map((singleSkill) => (
+              <div className="singleIcon" key={singleSkill.id}>
+                <img src={singleSkill.icon} alt={singleSkill.title} />
+                <p>{singleSkill.title}</p>
+              </div>
+            ))}
           </div>
           <div className="icons">
-            <img src={ts} alt="TS" />
-            <img src={css} alt="CSS" />
+            {mySkills.slice(6, 8).map((singleSkill) => (
+              <div className="singleIcon" key={singleSkill.id}>
+                <img src={singleSkill.icon} alt={singleSkill.title} />
+                <p>{singleSkill.title}</p>
+              </div>
+            ))}
           </div>
           <div className="icons">
-            <img src={html} alt="HTML" />
+            {mySkills.slice(8).map((singleSkill) => (
+              <div className="singleIcon" key={singleSkill.id}>
+                <img src={singleSkill.icon} alt={singleSkill.title} />
+                <p>{singleSkill.title}</p>
+              </div>
+            ))}
           </div>
         </div>
         <div className="skill-section">

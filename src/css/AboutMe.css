@@ -50,7 +50,12 @@
 }
 
 .explain img {
+  max-width: 59px;
   height: 50px;
+
+  &:hover {
+    height: 60px;
+  }
 }
 
 .explain span {
