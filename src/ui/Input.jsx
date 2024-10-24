@@ -1,16 +1,29 @@
 import PropTypes from "prop-types";
+import { forwardRef } from "react";
+
+const Input = forwardRef(function Input(
+  { textArea, placeholder, type, className, onChange },
+  ref
+) {
+  return textArea ? (
+    <textarea ref={ref} className={className} placeholder={placeholder} />
+  ) : (
+    <input
+      onChange={onChange}
+      ref={ref}
+      className={className}
+      type={type}
+      placeholder={placeholder}
+    />
+  );
+});
 
 Input.propTypes = {
   textArea: PropTypes.bool,
   placeholder: PropTypes.string,
   type: PropTypes.string,
   className: PropTypes.string,
+  onChange: PropTypes.func,
 };
 
-export default function Input({ textArea, placeholder, type, className }) {
-  return textArea ? (
-    <textarea className={className} type={type} placeholder={placeholder} />
-  ) : (
-    <input className={className} type={type} placeholder={placeholder} />
-  );
-}
+export default Input;

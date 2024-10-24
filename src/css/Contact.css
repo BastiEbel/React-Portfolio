@@ -173,6 +173,7 @@ form {
 }
 
 form button {
+  color: #ffffff;
   width: 253px;
   height: 58px;
   padding: 15px 30px 15px 30px;
@@ -182,6 +183,12 @@ form button {
   font-weight: 400;
   line-height: 27.6px;
   background-color: #70e61c;
+
+  &:hover {
+    cursor: pointer;
+    scale: 1.05;
+    background-color: #9747ff;
+  }
 }
 
 form button:disabled {

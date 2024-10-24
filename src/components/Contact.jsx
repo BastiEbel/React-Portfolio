@@ -3,8 +3,34 @@ import purpleCorner from "../assets/logos/Purple shadow 2.png";
 import scrollTopArrow from "../assets/logos/arrow-down-line.png";
 import Input from "../ui/Input";
 import { Link } from "react-scroll";
+import { useRef, useState } from "react";
 
 export default function Contact() {
+  const [disabled, setDisabled] = useState(true);
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const messageRef = useRef(null);
+
+  function onChangeHandler(event) {
+    if (event.target.checked) {
+      setDisabled(false);
+    } else {
+      setDisabled(true);
+    }
+  }
+
+  function onSubmitHandler(event) {
+    event.preventDefault();
+
+    const name = nameRef.current.value;
+    const email = emailRef.current.value;
+    const message = messageRef.current.value;
+
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Message:", message);
+  }
+
   return (
     <div id="contact" className="contact-container">
       <section className="contact-oversign">
@@ -25,20 +51,23 @@ export default function Contact() {
             Need a Frontend developer? <b>Contact me!</b>
           </p>
         </div>
-        <form>
+        <form onSubmit={onSubmitHandler}>
           <Input
+            ref={nameRef}
             className="input"
             type="text"
             textArea={false}
             placeholder="Your Name"
           />
           <Input
+            ref={emailRef}
             className="input"
-            type="text"
+            type="email"
             textArea={false}
             placeholder="E-Mail"
           />
           <Input
+            ref={messageRef}
             className="textArea"
             type="text"
             textArea={true}
@@ -46,7 +75,7 @@ export default function Contact() {
           />
           <span className="police">
             <label className="custom-checkbox">
-              <Input type="checkbox" />
+              <Input onChange={onChangeHandler} type="checkbox" />
               <span className="checkmark"></span>
             </label>
             <p>
@@ -54,7 +83,7 @@ export default function Contact() {
               processing of my data as outlined.
             </p>
           </span>
-          <button disabled={true}>Send Message :)</button>
+          <button disabled={disabled}>Send Message :)</button>
         </form>
         <img className="image-corner" src={purpleCorner} alt="Purple Corner" />
         <Link smooth={true} className="scrollTopArrow" to="header">
