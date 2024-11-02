@@ -1,6 +1,6 @@
-import blueshadow from "../assets/logos/Blue_shadow.png";
-import greenshadow from "../assets/logos/Green shadow.png";
-import project from "../util/project.js";
+import blueshadow from "../../assets/logos/Blue_shadow.png";
+import greenshadow from "../../assets/logos/Green shadow.png";
+import project from "../../util/project.js";
 import "../css/PortfolioProject.css";
 
 export default function PortfolioProject() {

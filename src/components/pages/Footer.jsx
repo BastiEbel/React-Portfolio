@@ -1,8 +1,8 @@
 import "../css/Footer.css";
-import logo from "../assets/logos/logo-white.png";
-import gitHub from "../assets/logos/Github button.png";
-import mail from "../assets/logos/Email button.png";
-import linkIn from "../assets/logos/Linkedin button.png";
+import logo from "../../assets/logos/logo-white.png";
+import gitHub from "../../assets/logos/Github button.png";
+import mail from "../../assets/logos/Email button.png";
+import linkIn from "../../assets/logos/Linkedin button.png";
 
 export default function Footer() {
   return (

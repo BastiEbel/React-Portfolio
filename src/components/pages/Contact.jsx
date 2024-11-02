@@ -1,7 +1,7 @@
 import "../css/Contact.css";
-import purpleCorner from "../assets/logos/Purple shadow 2.png";
-import scrollTopArrow from "../assets/logos/arrow-down-line.png";
-import Input from "../ui/Input";
+import purpleCorner from "../../assets/logos/Purple shadow 2.png";
+import scrollTopArrow from "../../assets/logos/arrow-down-line.png";
+import Input from "../../ui/Input";
 import { Link } from "react-scroll";
 import { useEffect, useRef, useState } from "react";
 

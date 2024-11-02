@@ -1,6 +1,6 @@
 import "../css/Skill.css";
 import { FaReact } from "react-icons/fa";
-import mySkills from "../util/skills";
+import mySkills from "../../util/skills";
 import { Link } from "react-scroll";
 
 export default function Skill() {

@@ -1,10 +1,10 @@
 import "../css/Header.css";
-import purpleImg from "../assets/logos/Purple_shadow.png";
-import greenImg from "../assets/logos/Purple shadow@2x.png";
-import gitHub from "../assets/logos/Github button.png";
-import mail from "../assets/logos/Email button.png";
-import linkIn from "../assets/logos/Linkedin button.png";
-import scrollArrow from "../assets/logos/arrow-down-line.png";
+import purpleImg from "../../assets/logos/Purple_shadow.png";
+import greenImg from "../../assets/logos/Purple shadow@2x.png";
+import gitHub from "../../assets/logos/Github button.png";
+import mail from "../../assets/logos/Email button.png";
+import linkIn from "../../assets/logos/Linkedin button.png";
+import scrollArrow from "../../assets/logos/arrow-down-line.png";
 import { Link } from "react-scroll";
 
 export default function Header() {

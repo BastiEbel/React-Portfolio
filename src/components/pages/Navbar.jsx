@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import profilLogo from "../assets/logos/logo-white.png";
+import profilLogo from "../../assets/logos/logo-white.png";
 import { Link } from "react-scroll";
 import "../css/Navbar.css";
 

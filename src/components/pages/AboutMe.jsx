@@ -1,9 +1,9 @@
 import "../css/AboutMe.css";
-import bulb from "../assets/logos/bulb desktop.png";
-import puzzle from "../assets/logos/puzzle desktop white.png";
-import bgProfil from "../assets/logos/Photo shadows.png";
-import profil from "../assets/image/hero character photo.png";
-import spacer from "../assets/logos/Vector.png";
+import bulb from "../../assets/logos/bulb desktop.png";
+import puzzle from "../../assets/logos/puzzle desktop white.png";
+import bgProfil from "../../assets/logos/Photo shadows.png";
+import profil from "../../assets/image/hero character photo.png";
+import spacer from "../../assets/logos/Vector.png";
 
 export default function AboutMe() {
   return (
