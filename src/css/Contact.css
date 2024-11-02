@@ -78,7 +78,7 @@ form {
   align-items: center;
   justify-content: space-between;
   width: 617px;
-  height: 504px;
+  /* height: 504px; */
   top: 90%;
   right: -4%;
   gap: 32px;
@@ -89,16 +89,33 @@ form {
 .textArea {
   color: #ffffff;
   background-color: #141d2f;
+  margin: 0 0 32px 0;
   display: inline-block;
   width: 617px;
   padding: 15px 25px;
   border-radius: 10px;
   border: 1px solid #9747ff;
   box-sizing: border-box;
+  outline: none;
 
   &:hover {
     border: 1px solid #70e61c;
   }
+}
+
+.focusedValid:focus {
+  border: 1px solid #70e61c;
+}
+
+.focusedInValid:focus {
+  border: 1px solid #e61c40;
+}
+
+.error-message {
+  margin: 0 0 8px 0;
+  text-align: left;
+  font-size: 12px;
+  color: #e61c40;
 }
 
 .textArea {
