@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  height: 800px;
+  height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -145,5 +145,90 @@
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1280px) {
+  .container-header h1 {
+    font-size: 80px; /* Schriftgröße anpassen */
+    line-height: 96px; /* Zeilenhöhe anpassen */
+  }
+
+  .header-name {
+    font-size: 100px; /* Schriftgröße anpassen */
+    line-height: 120px; /* Zeilenhöhe anpassen */
+  }
+
+  .header-job {
+    font-size: 48px; /* Schriftgröße anpassen */
+  }
+
+  .container-header button {
+    left: 50%; /* Button zentrieren */
+    transform: translateX(-50%); /* Button zentrieren */
+  }
+
+  .scrollSection {
+    top: 600px; /* Scroll-Section nach oben verschieben */
+    right: 50px; /* Scroll-Section nach innen verschieben */
+  }
+}
+@media (max-width: 1024px) {
+  .container-header h1 {
+    font-size: 60px; /* Schriftgröße anpassen */
+    line-height: 84px; /* Zeilenhöhe anpassen */
+  }
+
+  .header-name {
+    font-size: 80px; /* Schriftgröße anpassen */
+    line-height: 120px; /* Zeilenhöhe anpassen */
+  }
+
+  .header-job {
+    font-size: 48px; /* Schriftgröße anpassen */
+  }
+
+  .container-header button {
+    left: 50%; /* Button zentrieren */
+    transform: translateX(-50%); /* Button zentrieren */
+  }
+
+  .scrollSection {
+    top: 600px; /* Scroll-Section nach oben verschieben */
+    right: 50px; /* Scroll-Section nach innen verschieben */
+  }
+}
+
+@media (max-width: 768px) {
+  .container-header h1 {
+    font-size: 50px; /* Schriftgröße anpassen */
+    line-height: 60px; /* Zeilenhöhe anpassen */
+  }
+
+  .header-name {
+    font-size: 60px; /* Schriftgröße anpassen */
+    line-height: 96px; /* Zeilenhöhe anpassen */
+  }
+
+  .header-job {
+    font-size: 36px; /* Schriftgröße anpassen */
+  }
+
+  .container-links {
+    width: 100%; /* Links auf volle Breite setzen */
+    justify-content: center; /* Links zentrieren */
+  }
+
+  .scrollSection {
+    top: 500px; /* Scroll-Section nach oben verschieben */
+    right: 20px; /* Scroll-Section nach innen verschieben */
+  }
+}
+
+@media (max-width: 480px) {
+  .container-header h1 {
+    font-size: 40px; /* Schriftgröße anpassen */
+    line-height: 48px; /* Zeilenhöhe anpassen */
   }
 }

@@ -248,3 +248,94 @@ form button:disabled {
 ::placeholder {
   color: #ffffff;
 }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .contact-oversign h1 {
+    font-size: 70px;
+    line-height: 80px;
+  }
+
+  .contact-description {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .description-explain {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .description-explain p {
+    margin-left: 0;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .input,
+  .textArea {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-oversign h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .contact-description {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .description-explain {
+    width: 100%;
+  }
+
+  .description-oversign h3 {
+    font-size: 24px;
+  }
+
+  .description-explain p {
+    font-size: 14px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .input,
+  .textArea {
+    width: 100%;
+  }
+
+  form button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-oversign h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .description-oversign h3 {
+    font-size: 20px;
+  }
+
+  .description-explain p {
+    font-size: 12px;
+  }
+
+  form {
+    gap: 20px;
+  }
+
+  form button {
+    font-size: 18px;
+  }
+}

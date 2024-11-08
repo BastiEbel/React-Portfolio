@@ -68,7 +68,7 @@
 
 .bg-photo {
   position: absolute;
-  width: 610px;
+  max-width: 610px;
   height: 553.57px;
   right: 100px;
   top: 140px;
@@ -76,7 +76,7 @@
 
 .profil-pic {
   position: absolute;
-  width: 593px;
+  max-width: 593px;
   height: 647px;
   top: 30px;
   right: 100px;
@@ -91,34 +91,107 @@
   right: 0;
 }
 
-@media (max-width: 768px) {
-  .container-me p,
-  .about-me,
-  .explain span {
-    font-size: 5vw;
+/* Media Queries for Responsiveness */
+@media (max-width: 1280px) {
+  .container-me p {
+    font-size: 60px; /* Schriftgröße anpassen */
+    margin-left: 50px; /* Margin anpassen */
+    margin-bottom: 32px;
+  }
+
+  .about-me {
+    margin-left: 30px; /* Margin anpassen */
+  }
+
+  .container-explain {
+    margin-left: 30px; /* Margin anpassen */
   }
 
   .bg-photo {
-    width: 90%;
+    right: 1%; /* Position anpassen */
   }
 
   .profil-pic {
-    max-height: 60vh;
+    right: 1%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container-me p {
+    font-size: 60px; /* Schriftgröße anpassen */
+    margin-left: 30px; /* Margin anpassen */
+  }
+
+  .about-me {
+    margin-left: 30px; /* Margin anpassen */
+  }
+
+  .bg-photo {
+    width: 450px;
+    height: 420px;
+    right: 32px;
+  }
+  .profil-pic {
+    width: 420px;
+    height: 460px;
+    right: 32px;
+    top: 100px;
+  }
+
+  .spacer {
+    top: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overall {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .container-me p {
+    font-size: 50px; /* Schriftgröße anpassen */
+    margin-left: 20px; /* Margin anpassen */
+  }
+
+  .about-me {
+    margin-left: 20px; /* Margin anpassen */
+  }
+
+  .bg-photo,
+  .profil-pic {
+    width: 65%;
+    right: 16.5%;
+    top: 750px;
   }
 }
 
 @media (max-width: 480px) {
-  .container-me p,
-  .about-me,
-  .explain span {
-    font-size: 6vw;
+  .container-me p {
+    font-size: 40px; /* Schriftgröße anpassen */
+    margin-left: 10px; /* Margin anpassen */
   }
 
-  .bg-photo {
-    width: 95%;
+  .about-me {
+    margin-left: 10px; /* Margin anpassen */
   }
 
+  .explain {
+    flex-direction: column; /* Anordnung ändern */
+    align-items: flex-start; /* Ausrichtung anpassen */
+    width: 100%; /* Breite anpassen */
+  }
+
+  .explain img {
+    max-width: 40px; /* Bildgröße anpassen */
+    height: 40px; /* Bildgröße anpassen */
+  }
+
+  .bg-photo,
   .profil-pic {
-    max-height: 50vh;
+    width: 100%; /* Breite anpassen */
+    right: 0; /* Position anpassen */
   }
 }
