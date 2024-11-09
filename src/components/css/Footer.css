@@ -48,10 +48,10 @@
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
   .footerContainer {
-    flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     height: auto; /* Allow height to adjust based on content */
     padding: 20px 0; /* Add padding for spacing */
   }
@@ -91,56 +91,5 @@
   .footer-link {
     width: auto; /* Allow width to adjust */
     height: auto; /* Allow height to adjust */
-  }
-}
-
-@media (max-width: 480px) {
-  .footerContainer {
-    padding: 5px 0; /* Further adjust padding */
-  }
-
-  .footer-impressum img {
-    height: 50px; /* Further reduce image size */
-  }
-
-  .footer-impressum a {
-    font-size: 12px; /* Further adjust font size */
-  }
-
-  .footerContainer p {
-    font-size: 16px; /* Further adjust font size */
-  }
-
-  .footer-link {
-    flex-direction: column; /* Stack links vertically */
-    align-items: center; /* Center align links */
-    margin-bottom: 5px; /* Add bottom margin */
-  }
-}
-
-/* Media Queries for additional responsiveness */
-@media (max-width: 768px) {
-  .footerContainer {
-    flex-direction: column; /* Stack items on smaller screens */
-    align-items: center; /* Center align */
-  }
-
-  .footer-impressum {
-    margin-left: 0; /* Remove left margin on smaller screens */
-  }
-
-  .footer-link {
-    margin-right: 0; /* Remove right margin on smaller screens */
-    margin-top: 1vh; /* Add top margin for spacing */
-  }
-}
-
-@media (max-width: 480px) {
-  .footer-impressum a {
-    font-size: 3.5vw; /* Further adjust font size for very small screens */
-  }
-
-  .footerContainer p {
-    font-size: 4vw; /* Further adjust font size for very small screens */
   }
 }

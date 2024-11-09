@@ -1,7 +1,9 @@
 .overall {
   width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
   position: relative;
-  z-index: 1;
 }
 
 .container-me {
@@ -52,10 +54,10 @@
 .explain img {
   max-width: 59px;
   height: 50px;
+}
 
-  &:hover {
-    height: 60px;
-  }
+.explain img:hover {
+  height: 60px;
 }
 
 .explain span {
@@ -67,23 +69,27 @@
 }
 
 .bg-photo {
+  z-index: -1;
   position: absolute;
   max-width: 610px;
   height: 553.57px;
-  right: 100px;
-  top: 140px;
 }
 
 .profil-pic {
+  display: flex;
+  justify-content: flex-end;
+  width: auto;
+  height: 647px;
+}
+
+.profil-pic img {
   position: absolute;
   max-width: 593px;
   height: 647px;
-  top: 30px;
-  right: 100px;
 }
 
 .spacer {
-  z-index: -1;
+  z-index: 1;
   position: absolute;
   width: 100%;
   height: 878.5px;
@@ -94,104 +100,133 @@
 /* Media Queries for Responsiveness */
 @media (max-width: 1280px) {
   .container-me p {
-    font-size: 60px; /* Schriftgröße anpassen */
-    margin-left: 50px; /* Margin anpassen */
-    margin-bottom: 32px;
+    font-size: 70px;
+    margin-left: 50px;
   }
 
   .about-me {
-    margin-left: 30px; /* Margin anpassen */
+    margin-left: 50px;
   }
 
   .container-explain {
-    margin-left: 30px; /* Margin anpassen */
+    margin-left: 50px;
   }
 
   .bg-photo {
-    right: 1%; /* Position anpassen */
+    width: 493px;
+    height: auto;
+    top: 100px;
   }
 
-  .profil-pic {
-    right: 1%;
+  .profil-pic img {
+    width: 493px;
+    height: auto;
+    top: 100px;
   }
 }
 
 @media (max-width: 1024px) {
   .container-me p {
-    font-size: 60px; /* Schriftgröße anpassen */
-    margin-left: 30px; /* Margin anpassen */
+    margin-bottom: 16px;
   }
 
   .about-me {
-    margin-left: 30px; /* Margin anpassen */
+    width: 371px;
+    height: auto;
+  }
+
+  .container-explain {
+    margin-top: 24px;
+  }
+
+  .explain {
+    width: 344px;
   }
 
   .bg-photo {
-    width: 450px;
-    height: 420px;
-    right: 32px;
+    top: 160px;
   }
-  .profil-pic {
-    width: 420px;
-    height: 460px;
-    right: 32px;
-    top: 100px;
+
+  .profil-pic img {
+    top: 160px;
   }
 
   .spacer {
-    top: 450px;
+    top: 600px;
   }
 }
 
 @media (max-width: 768px) {
-  .overall {
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-  }
   .container-me p {
-    font-size: 50px; /* Schriftgröße anpassen */
-    margin-left: 20px; /* Margin anpassen */
+    font-size: 50px;
+    margin-left: 20px;
   }
 
   .about-me {
-    margin-left: 20px; /* Margin anpassen */
+    margin-left: 20px;
+    font-size: 14px;
   }
 
-  .bg-photo,
+  .container-explain {
+    margin-left: 20px;
+  }
+
+  .explain {
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+  }
+
+  .explain img {
+    max-width: 40px;
+    height: 30px;
+  }
+
+  .explain span {
+    font-size: 14px;
+  }
+
+  .bg-photo {
+    max-width: 100%;
+    height: auto;
+  }
+
   .profil-pic {
-    width: 65%;
-    right: 16.5%;
-    top: 750px;
+    justify-content: center;
+  }
+
+  .profil-pic img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .spacer {
+    height: auto;
+    top: auto;
   }
 }
 
 @media (max-width: 480px) {
   .container-me p {
-    font-size: 40px; /* Schriftgröße anpassen */
-    margin-left: 10px; /* Margin anpassen */
+    font-size: 30px;
+    margin-left: 10px;
   }
 
   .about-me {
-    margin-left: 10px; /* Margin anpassen */
+    margin-left: 10px;
+    font-size: 12px;
   }
 
   .explain {
-    flex-direction: column; /* Anordnung ändern */
-    align-items: flex-start; /* Ausrichtung anpassen */
-    width: 100%; /* Breite anpassen */
+    gap: 10px;
   }
 
   .explain img {
-    max-width: 40px; /* Bildgröße anpassen */
-    height: 40px; /* Bildgröße anpassen */
+    max-width: 30px;
+    height: 25px;
   }
 
-  .bg-photo,
-  .profil-pic {
-    width: 100%; /* Breite anpassen */
-    right: 0; /* Position anpassen */
+  .explain span {
+    font-size: 12px;
   }
 }

@@ -39,8 +39,10 @@ export default function AboutMe() {
           </div>
         </div>
       </div>
-      <img src={bgProfil} className="bg-photo" />
-      <img className="profil-pic" src={profil} alt="" />
+      <div className="profil-pic">
+        <img src={bgProfil} className="bg-photo" />
+        <img src={profil} alt="" />
+      </div>
       <img className="spacer" src={spacer} alt="Spacer" />
     </div>
   );

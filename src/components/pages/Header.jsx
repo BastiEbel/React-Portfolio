@@ -11,11 +11,17 @@ export default function Header() {
   return (
     <>
       <div id="header" className="container">
-        <img src={purpleImg} alt="Purple Image" />
+        <img className="purple" src={purpleImg} alt="Purple Image" />
         <div className="container-header">
           <div className="header">
             <h1>I am</h1>
-            <div style={{ display: "flex", flexDirection: "column" }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                flexDirection: "column",
+              }}
+            >
               <span className="header-name">Sebastian Ebel</span>
               <span className="header-job">FRONTEND DEVELOPER</span>
             </div>
@@ -24,7 +30,7 @@ export default function Header() {
             <button>Let&apos;s Talk</button>
           </Link>
         </div>
-        <img src={greenImg} alt="Green Image" />
+        <img className="green" src={greenImg} alt="Green Image" />
       </div>
       <div className="container-links">
         <div className="contact-section"></div>
