@@ -17,7 +17,7 @@
   margin-top: 100px;
   margin-left: 100px;
   width: 625px;
-  height: 649px;
+  height: auto;
 }
 
 .icons {
@@ -43,7 +43,7 @@
   line-height: 19.2px;
 }
 
-.icons img {
+.singleIcon img {
   width: 60px;
   height: 60px;
   gap: 10px;
@@ -81,12 +81,19 @@
   align-items: center;
 }
 
-.skill p {
+.skill h1 {
   margin: unset;
   font-size: 90px;
   font-weight: 700;
   line-height: 108px;
   color: #ffffff;
+}
+
+.skill div {
+  border-radius: 5px;
+  border: 4px solid #1cdae6;
+  width: 289px;
+  height: 0px;
 }
 
 .section-p {
@@ -119,11 +126,30 @@
   height: 68px;
 }
 
+@media (max-width: 1280px) {
+  .skill h1 {
+    font-size: 70px;
+  }
+
+  .skill div {
+    width: 229px;
+  }
+}
+
 @media (max-width: 1024px) {
   .icon-container {
     margin-left: 50px;
     width: 80%;
     height: auto;
+  }
+
+  .singleIcon p {
+    font-size: 14px;
+  }
+
+  .singleIcon img {
+    width: 40px;
+    height: 40px;
   }
 
   .skill-section {
@@ -135,14 +161,18 @@
     line-height: 80px;
   }
 
+  .skill div {
+    width: 160px;
+  }
+
   .section-p {
     width: 80%;
   }
 }
 
 @media (max-width: 768px) {
-  .icon-container {
-    flex-direction: column;
+  .overall-skills {
+    flex-direction: column-reverse;
     align-items: center;
     margin-left: 0;
   }
@@ -153,20 +183,27 @@
   }
 
   .skill-section {
+    align-items: flex-start;
     width: 100%;
   }
 
-  .skill p {
-    font-size: 50px;
-    line-height: 60px;
+  .skill {
+    width: 100%;
+  }
+
+  .skill div {
+    width: 75%;
   }
 
   .section-p {
-    font-size: 14px;
+    width: 50%;
+    text-align: start;
+    font-size: 16px;
   }
 
   .skill-section button {
-    width: 150px;
+    margin-top: 32px;
+    margin-left: calc(50% - 100px);
     font-size: 20px;
   }
 }

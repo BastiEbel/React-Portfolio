@@ -48,48 +48,16 @@
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 1280px) {
-  .footerContainer {
-    align-items: center;
-    justify-content: space-around;
-    height: auto; /* Allow height to adjust based on content */
-    padding: 20px 0; /* Add padding for spacing */
-  }
-
-  .footer-impressum {
-    margin-left: 0; /* Remove left margin */
-    margin-bottom: 20px; /* Add bottom margin for spacing */
-  }
-
-  .footer-link {
-    margin-right: 0; /* Remove right margin */
-    margin-bottom: 10px; /* Add bottom margin for spacing */
-  }
-
-  .footerContainer p {
-    font-size: 20px; /* Adjust font size */
-  }
-}
-
 @media (max-width: 768px) {
-  .footerContainer {
-    padding: 10px 0; /* Adjust padding */
-  }
-
   .footer-impressum img {
-    height: 60px; /* Reduce image size */
+    height: 60px;
   }
 
   .footer-impressum a {
-    font-size: 14px; /* Adjust font size */
+    font-size: 14px;
   }
 
   .footerContainer p {
-    font-size: 18px; /* Adjust font size */
-  }
-
-  .footer-link {
-    width: auto; /* Allow width to adjust */
-    height: auto; /* Allow height to adjust */
+    font-size: 18px;
   }
 }

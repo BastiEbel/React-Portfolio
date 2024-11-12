@@ -205,12 +205,19 @@ section p {
 }
 
 @media (max-width: 768px) {
+  article {
+    height: auto;
+    position: relative;
+  }
   .side-logo {
     width: 30vw;
+    top: auto;
   }
 
   .side-logo-green {
     width: 30vw;
+    bottom: 0px;
+    top: auto;
   }
 
   .btn-container {

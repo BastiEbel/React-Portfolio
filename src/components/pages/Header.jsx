@@ -9,7 +9,7 @@ import { Link } from "react-scroll";
 
 export default function Header() {
   return (
-    <>
+    <aside>
       <div id="header" className="container">
         <img className="purple" src={purpleImg} alt="Purple Image" />
         <div className="container-header">
@@ -46,6 +46,6 @@ export default function Header() {
           <img src={scrollArrow} alt="Arrow" />
         </div>
       </Link>
-    </>
+    </aside>
   );
 }

@@ -12,7 +12,7 @@
   position: relative;
 }
 
-.container-me p {
+.container-me h1 {
   width: 452px;
   height: 108px;
   margin-left: 100px;
@@ -21,9 +21,10 @@
   line-height: 1.2;
   color: #ffffff;
   margin-bottom: 64px;
+  margin-left: 100px;
 }
 
-.about-me {
+.container-me span {
   display: flex;
   margin-left: 100px;
   width: 471px;
@@ -99,12 +100,12 @@
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1280px) {
-  .container-me p {
+  .container-me h1 {
     font-size: 70px;
     margin-left: 50px;
   }
 
-  .about-me {
+  .container-me span {
     margin-left: 50px;
   }
 
@@ -126,11 +127,11 @@
 }
 
 @media (max-width: 1024px) {
-  .container-me p {
+  .container-me h1 {
     margin-bottom: 16px;
   }
 
-  .about-me {
+  .container-me span {
     width: 371px;
     height: auto;
   }
@@ -141,14 +142,20 @@
 
   .explain {
     width: 344px;
+    gap: 16px;
+  }
+
+  .explain span {
+    margin-left: 16px;
   }
 
   .bg-photo {
-    top: 160px;
+    top: 250px;
   }
 
   .profil-pic img {
-    top: 160px;
+    width: 400px;
+    top: 250px;
   }
 
   .spacer {
@@ -157,33 +164,76 @@
 }
 
 @media (max-width: 768px) {
-  .container-me p {
-    font-size: 50px;
-    margin-left: 20px;
+  .overall {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  .about-me {
-    margin-left: 20px;
-    font-size: 14px;
+  .container-me {
+    height: 700px;
+  }
+  .container-me h1 {
+    width: 452px;
+    height: 108px;
+    font-size: 90px;
+    line-height: 1.2;
+    margin-bottom: 64px;
+  }
+
+  .container-me span {
+    width: 471px;
+    height: 114px;
+    font-size: 16px;
+    line-height: 1.2;
   }
 
   .container-explain {
-    margin-left: 20px;
+    margin-left: unset;
+    align-items: center;
+    margin-top: 50px;
   }
 
   .explain {
-    flex-direction: column;
-    align-items: flex-start;
-    width: auto;
+    margin: 16px 0;
+    width: 444px;
+    gap: 35px;
   }
 
   .explain img {
-    max-width: 40px;
-    height: 30px;
+    max-width: 59px;
+    height: 50px;
+  }
+
+  .explain img:hover {
+    height: 60px;
   }
 
   .explain span {
-    font-size: 14px;
+    width: 371px;
+    font-size: 16px;
+    line-height: 1.2;
+    align-items: center;
+  }
+
+  .bg-photo {
+    z-index: -1;
+    position: absolute;
+    max-width: 610px;
+    height: 553.57px;
+  }
+
+  .profil-pic {
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+    height: 647px;
+  }
+
+  .profil-pic img {
+    position: absolute;
+    max-width: 593px;
+    height: 647px;
   }
 
   .bg-photo {
@@ -198,11 +248,12 @@
   .profil-pic img {
     max-width: 100%;
     height: auto;
+    top: auto;
   }
 
   .spacer {
     height: auto;
-    top: auto;
+    top: 1040px;
   }
 }
 

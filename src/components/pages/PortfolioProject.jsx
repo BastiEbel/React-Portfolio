@@ -5,7 +5,7 @@ import "../css/PortfolioProject.css";
 
 export default function PortfolioProject() {
   return (
-    <div id="portfolio">
+    <article id="portfolio">
       <section>
         <div className="oversign">
           <span></span>
@@ -56,8 +56,8 @@ export default function PortfolioProject() {
       <img
         className="side-logo-green"
         src={greenshadow}
-        alt="Grenn Shadow logo"
+        alt="Green Shadow logo"
       />
-    </div>
+    </article>
   );
 }

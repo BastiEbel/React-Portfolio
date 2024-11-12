@@ -203,12 +203,12 @@
   }
 
   .header-name {
-    font-size: 80px;
+    font-size: 70px;
     line-height: 120px;
   }
 
   .header-job {
-    font-size: 48px; /* Schriftgröße anpassen */
+    font-size: 40px;
   }
 
   .container-header button {
@@ -224,27 +224,30 @@
 
 @media (max-width: 768px) {
   .container-header h1 {
-    font-size: 50px; /* Schriftgröße anpassen */
-    line-height: 60px; /* Zeilenhöhe anpassen */
+    font-size: 50px;
+    line-height: 60px;
   }
 
   .header-name {
-    font-size: 60px; /* Schriftgröße anpassen */
-    line-height: 96px; /* Zeilenhöhe anpassen */
+    font-size: 60px;
+    line-height: 96px;
   }
 
   .header-job {
-    font-size: 36px; /* Schriftgröße anpassen */
+    font-size: 36px;
   }
 
   .container-links {
-    width: 100%; /* Links auf volle Breite setzen */
-    justify-content: center; /* Links zentrieren */
+    width: 100%;
+    justify-content: center;
   }
 
-  .scrollSection {
-    top: 500px; /* Scroll-Section nach oben verschieben */
-    right: 20px; /* Scroll-Section nach innen verschieben */
+  .purple {
+    width: 372px;
+    height: 506px;
+  }
+  .green {
+    height: 413px;
   }
 }
 

@@ -6,7 +6,7 @@ import linkIn from "../../assets/logos/Linkedin button.png";
 
 export default function Footer() {
   return (
-    <div className="footerContainer">
+    <footer className="footerContainer">
       <section className="footer-impressum">
         <img src={logo} alt="Logp" />
         <a href="">Impressum</a>
@@ -17,6 +17,6 @@ export default function Footer() {
         <img src={mail} alt="EMail" className="icons-links" />
         <img src={linkIn} alt="LinkIn" className="icons-links" />
       </section>
-    </div>
+    </footer>
   );
 }

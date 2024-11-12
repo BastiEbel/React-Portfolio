@@ -16,7 +16,7 @@ function Navbar() {
   }
 
   return (
-    <div className="navbar">
+    <header className="navbar">
       <img src={profilLogo} alt="S.Ebel" className="logo" />
       <ul className="nav-links">
         <li>
@@ -38,7 +38,7 @@ function Navbar() {
       <div onClick={toggleNav} className="menu-icon">
         {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
       </div>
-      <div className={nav ? "nav-menu active" : "nav-menu"}>
+      <nav className={nav ? "nav-menu active" : "nav-menu"}>
         <ul>
           <li>
             <Link
@@ -74,8 +74,8 @@ function Navbar() {
             </Link>
           </li>
         </ul>
-      </div>
-    </div>
+      </nav>
+    </header>
   );
 }
 

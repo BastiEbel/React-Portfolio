@@ -47,15 +47,8 @@ export default function Skill() {
         </div>
         <div className="skill-section">
           <div className="skill">
-            <p>Skills</p>
-            <div
-              style={{
-                borderRadius: "5px",
-                border: "4px solid #1CDAE6",
-                width: "289px",
-                height: "0px",
-              }}
-            ></div>
+            <h1>Skills</h1>
+            <div></div>
           </div>
           <p className="section-p">
             I have gained experience in building projects with various front end

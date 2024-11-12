@@ -7,10 +7,10 @@ import spacer from "../../assets/logos/Vector.png";
 
 export default function AboutMe() {
   return (
-    <div id="about" className="overall">
+    <main id="about" className="overall">
       <div className="container-me">
-        <p className="over-sign">About me</p>
-        <span className="about-me">
+        <h1 className="over-sign">About me</h1>
+        <span>
           Hi, I am a passionate Junior Developer with a strong interest in web
           development and software design. Through the Developer Academy, I have
           learned the fundamentals of programming with a focus on Frontend
@@ -44,6 +44,6 @@ export default function AboutMe() {
         <img src={profil} alt="" />
       </div>
       <img className="spacer" src={spacer} alt="Spacer" />
-    </div>
+    </main>
   );
 }

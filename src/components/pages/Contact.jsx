@@ -98,7 +98,7 @@ export default function Contact() {
             Need a Frontend developer? <b>Contact me!</b>
           </p>
         </div>
-        <form action="/send_mail.php" onSubmit={onSubmitHandler}>
+        <form action="/send_mail.php" method="post" onSubmit={onSubmitHandler}>
           <div>
             {error.name && <p className="error-message">{error.name}</p>}
             <Input
