@@ -172,6 +172,10 @@
 
   .container-me {
     height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .container-me h1 {
     width: 452px;
@@ -179,6 +183,7 @@
     font-size: 90px;
     line-height: 1.2;
     margin-bottom: 64px;
+    margin-left: 0px;
   }
 
   .container-me span {
@@ -186,6 +191,7 @@
     height: 114px;
     font-size: 16px;
     line-height: 1.2;
+    margin-left: 0px;
   }
 
   .container-explain {
@@ -258,26 +264,38 @@
 }
 
 @media (max-width: 480px) {
-  .container-me p {
-    font-size: 30px;
-    margin-left: 10px;
+  .container-me {
+    width: 90%;
+  }
+  .container-me h1 {
+    margin-bottom: unset;
+    font-size: 40px;
+    width: auto;
+  }
+  .container-me span {
+    width: auto;
+    height: auto;
+    font-size: 14px;
+    text-align: center;
   }
 
   .about-me {
-    margin-left: 10px;
     font-size: 12px;
   }
 
   .explain {
+    width: auto;
     gap: 10px;
+    justify-content: center;
   }
 
   .explain img {
-    max-width: 30px;
-    height: 25px;
+    max-width: 50px;
+    height: auto;
   }
 
   .explain span {
+    width: auto;
     font-size: 12px;
   }
 }

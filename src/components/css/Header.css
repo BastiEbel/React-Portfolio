@@ -211,11 +211,6 @@
     font-size: 40px;
   }
 
-  .container-header button {
-    left: 50%; /* Button zentrieren */
-    transform: translateX(-50%); /* Button zentrieren */
-  }
-
   .scrollSection {
     top: 600px; /* Scroll-Section nach oben verschieben */
     right: 50px; /* Scroll-Section nach innen verschieben */
@@ -224,26 +219,38 @@
 
 @media (max-width: 768px) {
   .container-header h1 {
-    font-size: 50px;
-    line-height: 60px;
+    font-size: 40px;
+    margin: unset;
+    line-height: 108px;
   }
 
   .header-name {
-    font-size: 60px;
-    line-height: 96px;
+    font-size: 46px;
+    line-height: unset;
   }
 
   .header-job {
-    font-size: 36px;
+    font-size: 30px;
   }
 
   .container-links {
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
+  }
+
+  .container-header button {
+    width: 150px;
+    height: auto;
+    font-size: 18px;
+
+    &:hover {
+      width: 155px;
+      height: 58px;
+    }
   }
 
   .purple {
-    width: 372px;
+    width: 252px;
     height: 506px;
   }
   .green {
@@ -253,7 +260,20 @@
 
 @media (max-width: 480px) {
   .container-header h1 {
-    font-size: 40px; /* Schriftgröße anpassen */
-    line-height: 48px; /* Zeilenhöhe anpassen */
+    font-size: 24px;
+    line-height: 108px;
+  }
+
+  .header-name {
+    font-size: 30px;
+    line-height: 70px;
+  }
+
+  .header-job {
+    font-size: 20px;
+  }
+
+  .scrollSection span {
+    font-size: 20px;
   }
 }

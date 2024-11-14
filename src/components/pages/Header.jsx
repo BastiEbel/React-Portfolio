@@ -19,6 +19,7 @@ export default function Header() {
               style={{
                 display: "flex",
                 alignItems: "center",
+                justifyContent: "center",
                 flexDirection: "column",
               }}
             >

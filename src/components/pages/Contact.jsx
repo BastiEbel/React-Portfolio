@@ -148,8 +148,10 @@ export default function Contact() {
                 <span className="checkmark"></span>
               </label>
               <p>
-                I&apos;ve read the <a href="">privacy policy</a> and agree to
-                the processing of my data as outlined.
+                <span>
+                  I&apos;ve read the <a href="">privacy policy</a> and agree to
+                  the processing of my data as outlined.
+                </span>
               </p>
             </span>
           </div>

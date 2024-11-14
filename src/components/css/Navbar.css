@@ -99,3 +99,9 @@
     display: none;
   }
 }
+
+@media (max-width: 480px) {
+  .logo {
+    height: 50px;
+  }
+}

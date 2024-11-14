@@ -209,6 +209,38 @@ section p {
     height: auto;
     position: relative;
   }
+
+  section {
+    width: auto;
+  }
+  section p {
+    display: flex;
+    margin-left: 12px;
+  }
+
+  .oversign span {
+    margin-right: 25px;
+  }
+  .project-overview {
+    width: auto;
+    height: auto;
+  }
+
+  .project-container {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: auto;
+  }
+
+  .project-hover {
+    height: 420px;
+  }
+
+  .project-image {
+    width: 80%;
+    height: 80%;
+  }
   .side-logo {
     width: 30vw;
     top: auto;
@@ -221,7 +253,38 @@ section p {
   }
 
   .btn-container {
-    flex-direction: column;
+    width: auto;
+    height: auto;
+  }
+
+  .btn-github {
+    margin: 8px 0 8px 0;
+    font-size: 16px;
+    width: 80px;
+    height: 30px;
+  }
+
+  .btn-site {
+    margin: 8px 0 8px 0;
+    font-size: 16px;
+    width: 80px;
+    height: 30px;
+  }
+  .description-container {
+    width: auto;
+    height: 75%;
+  }
+
+  .description-container h4 {
+    font-size: 28px;
+  }
+
+  .description-container span {
+    font-size: 16px;
+  }
+
+  .description-container p {
+    font-size: 16px;
   }
 }
 
@@ -230,8 +293,15 @@ section p {
     font-size: 6vw;
   }
 
-  .description-container span,
+  .description-container h4 {
+    font-size: 24px;
+  }
+
+  .description-container span {
+    font-size: 14px;
+  }
+
   .description-container p {
-    font-size: 5vw;
+    font-size: 14px;
   }
 }
