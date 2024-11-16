@@ -6,6 +6,7 @@ import mail from "../../assets/logos/Email button.png";
 import linkIn from "../../assets/logos/Linkedin button.png";
 import scrollArrow from "../../assets/logos/arrow-down-line.png";
 import { Link } from "react-scroll";
+import contactLinks from "../../util/contactLinks";
 
 export default function Header() {
   return (
@@ -36,9 +37,25 @@ export default function Header() {
       <div className="container-links">
         <div className="contact-section"></div>
         <div className="link-section">
-          <img src={gitHub} alt="Git Hub" className="icons-links" />
-          <img src={mail} alt="EMail" className="icons-links" />
-          <img src={linkIn} alt="LinkIn" className="icons-links" />
+          <a
+            className="icons-links"
+            href={contactLinks.github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={gitHub} alt="Git Hub" />
+          </a>
+          <a className="icons-links" href={`mailto:${contactLinks.contact}`}>
+            <img src={mail} alt="E-Mail" />
+          </a>
+          <a
+            className="icons-links"
+            href={contactLinks.linkin}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={linkIn} alt="LinkIn" />
+          </a>
         </div>
       </div>
       <Link to="about" smooth={true} offset={-225}>
