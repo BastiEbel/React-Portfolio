@@ -73,7 +73,7 @@
 
 form {
   z-index: 1;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -169,7 +169,7 @@ form {
 }
 
 .police {
-  display: inline-flex;
+  display: flex;
 }
 
 .police p {
@@ -289,6 +289,7 @@ form button:disabled {
     align-items: center;
     font-size: 50px;
     line-height: 60px;
+    margin-left: 16px;
   }
 
   .contact-description {
@@ -319,14 +320,12 @@ form button:disabled {
 
   .input,
   .textArea {
-    width: 100%;
+    width: 80%;
+    margin-left: 10%;
   }
 
   form button {
-    width: 100%;
-    height: 35px;
-    padding: unset;
-    margin-top: 16px;
+    width: 50%;
   }
   .police a {
     text-wrap: nowrap;
@@ -339,6 +338,11 @@ form button:disabled {
   .scrollTopArrow {
     top: 6%;
     left: 42%;
+  }
+
+  .police {
+    margin-left: 16px;
+    margin-right: 16px;
   }
 }
 
@@ -361,6 +365,18 @@ form button:disabled {
   }
 
   form button {
+    width: 80%;
     font-size: 18px;
+    height: 35px;
+    padding: unset;
+    margin-top: 16px;
+  }
+
+  .scrollTopArrow {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

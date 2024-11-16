@@ -290,7 +290,7 @@ section p {
 
 @media (max-width: 480px) {
   .oversign h3 {
-    font-size: 6vw;
+    font-size: 40px;
   }
 
   .description-container h4 {
