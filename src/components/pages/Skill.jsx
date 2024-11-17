@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 
 export default function Skill() {
   return (
-    <div className="skill-container">
+    <div id="skills" className="skill-container">
       <div className="overall-skills">
         <div className="icon-container">
           <div className="icons">

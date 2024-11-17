@@ -25,13 +25,13 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="portfolio" smooth={true} offset={-150} duration={500}>
-            Portfolio
+          <Link to="skills" smooth={true} offset={-150} duration={500}>
+            Skills
           </Link>
         </li>
         <li>
-          <Link to="contact" smooth={true} offset={80} duration={500}>
-            Contact
+          <Link to="portfolio" smooth={true} offset={80} duration={500}>
+            Portfolio
           </Link>
         </li>
       </ul>

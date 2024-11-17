@@ -67,6 +67,9 @@
   font-size: 16px;
   line-height: 1.2;
   color: #ffffff;
+  margin-left: unset;
+  display: flex;
+  align-items: center;
 }
 
 .bg-photo {
