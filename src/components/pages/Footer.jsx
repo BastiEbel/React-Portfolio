@@ -17,7 +17,7 @@ export default function Footer() {
   }
   return (
     <>
-      <DialogModal ref={dialogRef} info={policy} />
+      <DialogModal ref={dialogRef} info={policy} impressum={true} />
       <footer className="footerContainer">
         <section className="footer-impressum">
           <img src={logo} alt="Logp" />

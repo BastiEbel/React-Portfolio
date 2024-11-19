@@ -7,7 +7,50 @@
   color: #ffffff;
   border-radius: 15px;
   border: 5px solid #9747ff;
+  padding: 32px;
+  width: 50%;
+  height: 75%;
+}
+
+.mediaClose {
+  display: none;
+}
+
+.openDialog main {
+  overflow-x: scroll;
+}
+.dialogSection {
+  text-align: center;
+  height: auto;
+  width: auto;
+}
+body.no-scroll {
+  overflow: hidden;
+}
+.dialogSection p {
+  margin-left: unset;
 }
 .closeDialog {
   display: none;
+}
+
+@media (max-width: 480px) {
+  .openDialog {
+    width: auto;
+    height: auto;
+  }
+  .mediaClose {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .mediaClose button {
+    border: unset;
+    background: #141d2f;
+    color: #ffffff;
+  }
 }

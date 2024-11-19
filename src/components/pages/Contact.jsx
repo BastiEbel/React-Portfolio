@@ -4,6 +4,8 @@ import scrollTopArrow from "../../assets/logos/arrow-down-line.png";
 import Input from "../../ui/Input";
 import { Link } from "react-scroll";
 import { useEffect, useRef, useState } from "react";
+import DialogModal from "../../ui/DialogModal";
+import policy from "../../util/policyImpressum";
 
 export default function Contact() {
   const [checked, setChecked] = useState(false);
@@ -17,6 +19,12 @@ export default function Contact() {
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const messageRef = useRef(null);
+  const dialogRef = useRef();
+
+  function openModal(event) {
+    event.preventDefault();
+    dialogRef.current.open();
+  }
 
   useEffect(() => {
     if (error.name && nameRef.current) {
@@ -79,89 +87,105 @@ export default function Contact() {
   }
 
   return (
-    <div id="contact" className="contact-container">
-      <section className="contact-oversign">
-        <h1>Contact</h1>
-        <span></span>
-      </section>
-      <section className="contact-description">
-        <div className="description-explain">
-          <div className="description-oversign">
-            <span></span>
-            <h3>Got a problem to solve?</h3>
+    <>
+      <DialogModal ref={dialogRef} info={policy} impressum={false} />
+      <div id="contact" className="contact-container">
+        <section className="contact-oversign">
+          <h1>Contact</h1>
+          <span></span>
+        </section>
+        <section className="contact-description">
+          <div className="description-explain">
+            <div className="description-oversign">
+              <span></span>
+              <h3>Got a problem to solve?</h3>
+            </div>
+            <p>
+              Contact me through this form, I am interested in hearing from you,
+              knowing your ideas and contributing to your projects with my work.
+            </p>
+            <p>
+              Need a Frontend developer? <b>Contact me!</b>
+            </p>
           </div>
-          <p>
-            Contact me through this form, I am interested in hearing from you,
-            knowing your ideas and contributing to your projects with my work.
-          </p>
-          <p>
-            Need a Frontend developer? <b>Contact me!</b>
-          </p>
-        </div>
-        <form action="/send_mail.php" method="post" onSubmit={onSubmitHandler}>
-          <div>
-            {error.name && <p className="error-message">{error.name}</p>}
-            <Input
-              length={64}
-              ref={nameRef}
-              className={`input ${
-                !error.name ? "focusedValid" : "focusedInValid"
-              }`}
-              type="text"
-              textArea={false}
-              placeholder="Your Name"
-            />
-            {(error.email || error.mailIsValid) && (
-              <p className="error-message">
-                {error.email || error.mailIsValid}
-              </p>
-            )}
-            <Input
-              length={64}
-              ref={emailRef}
-              className={`input ${
-                !error.email ? "focusedValid" : "focusedInValid"
-              }`}
-              type="email"
-              textArea={false}
-              placeholder="E-Mail"
-            />
-            {error.message && <p className="error-message">{error.message}</p>}
-            <Input
-              length={254}
-              ref={messageRef}
-              className={`textArea ${
-                !error.message ? "focusedValid" : "focusedInValid"
-              }`}
-              type="text"
-              textArea={true}
-              placeholder="Your Message"
-            />
+          <form
+            action="/send_mail.php"
+            method="post"
+            onSubmit={onSubmitHandler}
+          >
+            <div>
+              {error.name && <p className="error-message">{error.name}</p>}
+              <Input
+                length={64}
+                ref={nameRef}
+                className={`input ${
+                  !error.name ? "focusedValid" : "focusedInValid"
+                }`}
+                type="text"
+                textArea={false}
+                placeholder="Your Name"
+              />
+              {(error.email || error.mailIsValid) && (
+                <p className="error-message">
+                  {error.email || error.mailIsValid}
+                </p>
+              )}
+              <Input
+                length={64}
+                ref={emailRef}
+                className={`input ${
+                  !error.email ? "focusedValid" : "focusedInValid"
+                }`}
+                type="email"
+                textArea={false}
+                placeholder="E-Mail"
+              />
+              {error.message && (
+                <p className="error-message">{error.message}</p>
+              )}
+              <Input
+                length={254}
+                ref={messageRef}
+                className={`textArea ${
+                  !error.message ? "focusedValid" : "focusedInValid"
+                }`}
+                type="text"
+                textArea={true}
+                placeholder="Your Message"
+              />
 
-            <span className="police">
-              <label className="custom-checkbox">
-                <Input
-                  checked={checked}
-                  onChange={onChangeHandler}
-                  type="checkbox"
-                />
-                <span className="checkmark"></span>
-              </label>
-              <p>
-                <span>
-                  I&apos;ve read the <a href="">privacy policy</a> and agree to
-                  the processing of my data as outlined.
-                </span>
-              </p>
-            </span>
-          </div>
-          <button disabled={disabled}>Send Message :)</button>
-        </form>
-        <img className="image-corner" src={purpleCorner} alt="Purple Corner" />
-        <Link smooth={true} className="scrollTopArrow" to="header">
-          <img src={scrollTopArrow} alt="Arrow Scroll Top" />
-        </Link>
-      </section>
-    </div>
+              <span className="police">
+                <label className="custom-checkbox">
+                  <Input
+                    checked={checked}
+                    onChange={onChangeHandler}
+                    type="checkbox"
+                  />
+                  <span className="checkmark"></span>
+                </label>
+                <p>
+                  <span>
+                    I&apos;ve read the{" "}
+                    <a onClick={openModal} href="">
+                      privacy policy
+                    </a>{" "}
+                    and agree to the processing of my data as outlined.
+                  </span>
+                </p>
+              </span>
+            </div>
+            <button disabled={disabled}>Send Message :)</button>
+          </form>
+          <img
+            className="image-corner"
+            src={purpleCorner}
+            alt="Purple Corner"
+          />
+          <Link smooth={true} className="scrollTopArrow" to="header">
+            <img src={scrollTopArrow} alt="Arrow Scroll Top" />
+          </Link>
+        </section>
+      </div>
+    </>
   );
 }
