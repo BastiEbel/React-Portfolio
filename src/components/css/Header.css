@@ -49,7 +49,7 @@
 
 .container-header button {
   position: absolute;
-  width: 165px;
+  width: auto;
   height: 58px;
   border-radius: 10px;
   padding: 15px 30px 15px 30px;
@@ -58,12 +58,13 @@
   font-size: 23px;
   font-weight: 400;
   transition: ease-in-out 250ms;
+  text-wrap: nowrap;
 }
 
 .container-header button:hover {
   cursor: pointer;
   background-color: #9747ff;
-  width: 195px;
+  width: calc(12% + 20px);
   height: 68px;
 }
 
@@ -119,25 +120,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 28px;
-  height: 160px;
+  height: 150px;
   top: 747px;
   right: 100px;
   transition: transform 0.225s ease-in-out;
+  text-wrap: nowrap;
 
   &:hover {
     cursor: pointer;
 
     img {
-      animation: jump 0.5s ease-in-out;
+      animation: infinite scroll-jump 1.75s ease-in-out;
     }
   }
 }
 
 .scrollSection span {
   color: #ffffff;
-  width: 133px;
+  width: auto;
   height: 28px;
   rotate: 90deg;
   font-size: 23px;
@@ -151,15 +153,36 @@
   height: 24px;
 }
 
-@keyframes jump {
+@keyframes scroll-jump {
   0% {
-    transform: translate(0);
+    transform: translate(0px);
+  }
+  10% {
+    transform: translateY(-4px);
+  }
+  20% {
+    transform: translateY(-8px);
   }
   30% {
-    transform: translateY(-40px);
+    transform: translateY(-12px);
+  }
+  40% {
+    transform: translateY(-16px);
+  }
+  50% {
+    transform: translateY(-20px);
   }
   60% {
-    transform: translateY(-20px);
+    transform: translateY(16px);
+  }
+  70% {
+    transform: translateY(12px);
+  }
+  80% {
+    transform: translateY(8px);
+  }
+  90% {
+    transform: translateY(4px);
   }
   100% {
     transform: translateY(0px);
@@ -212,8 +235,8 @@
   }
 
   .scrollSection {
-    top: 600px; /* Scroll-Section nach oben verschieben */
-    right: 50px; /* Scroll-Section nach innen verschieben */
+    top: 600px;
+    right: 50px;
   }
 }
 
@@ -239,7 +262,6 @@
   }
 
   .container-header button {
-    width: 150px;
     height: auto;
     font-size: 18px;
 
@@ -266,7 +288,7 @@
 
   .header-name {
     font-size: 30px;
-    line-height: 70px;
+    line-height: unset;
   }
 
   .header-job {

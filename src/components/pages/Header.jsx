@@ -7,15 +7,17 @@ import linkIn from "../../assets/logos/Linkedin button.png";
 import scrollArrow from "../../assets/logos/arrow-down-line.png";
 import { Link } from "react-scroll";
 import contactLinks from "../../util/contactLinks";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
+  const { t } = useTranslation();
   return (
     <aside>
       <div id="header" className="container">
         <img className="purple" src={purpleImg} alt="Purple Image" />
         <div className="container-header">
           <div className="header">
-            <h1>I am</h1>
+            <h1>{t("greeting")}</h1>
             <div
               style={{
                 display: "flex",
@@ -25,11 +27,11 @@ export default function Header() {
               }}
             >
               <span className="header-name">Sebastian Ebel</span>
-              <span className="header-job">FRONTEND DEVELOPER</span>
+              <span className="header-job">{t("job")}</span>
             </div>
           </div>
           <Link smooth={true} offset={80} to="contact">
-            <button>Let&apos;s Talk</button>
+            <button>{t("talk")}</button>
           </Link>
         </div>
         <img className="green" src={greenImg} alt="Green Image" />
@@ -60,7 +62,7 @@ export default function Header() {
       </div>
       <Link to="about" smooth={true} offset={-225}>
         <div className="scrollSection">
-          <span>Scroll down</span>
+          <span>{t("scroll")}</span>
           <img src={scrollArrow} alt="Arrow" />
         </div>
       </Link>

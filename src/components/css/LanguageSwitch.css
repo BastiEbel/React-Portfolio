@@ -1,0 +1,15 @@
+select {
+  font-size: 23px;
+  background: transparent;
+  color: white;
+  border: unset;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+select:focus {
+  background: transparent;
+  outline: unset;
+}
