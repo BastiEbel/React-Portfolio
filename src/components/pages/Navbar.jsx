@@ -1,14 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import profilLogo from "../../assets/logos/logo-white.png";
-import { Link } from "react-scroll";
+import { Link, Events, scrollSpy } from "react-scroll";
 import "../css/Navbar.css";
 import LanguageSwitch from "../../ui/LanguageSwitch";
 import { useTranslation } from "react-i18next";
 
 function Navbar() {
   const [nav, setNav] = useState(false);
+  const [activeLink, setActiveLink] = useState("");
+
   const { t } = useTranslation();
+
+  useEffect(() => {
+    Events.scrollEvent.register("begin", function () {
+      console.log("begin", arguments);
+    });
+
+    Events.scrollEvent.register("end", function () {
+      console.log("end", arguments);
+    });
+
+    scrollSpy.update();
+
+    return () => {
+      Events.scrollEvent.remove("begin");
+      Events.scrollEvent.remove("end");
+    };
+  }, []);
 
   function toggleNav() {
     setNav(!nav);
@@ -23,17 +42,41 @@ function Navbar() {
       <img src={profilLogo} alt="S.Ebel" className="logo" />
       <ul className="nav-links">
         <li>
-          <Link to="about" smooth={true} offset={-225} duration={500}>
+          <Link
+            to="about"
+            smooth={true}
+            offset={-150}
+            duration={500}
+            spy={true}
+            onSetActive={() => setActiveLink("section2")}
+            className={activeLink === "about" ? "active" : ""}
+          >
             {t("about")}
           </Link>
         </li>
         <li>
-          <Link to="skills" smooth={true} offset={-150} duration={500}>
+          <Link
+            to="skills"
+            smooth={true}
+            offset={-80}
+            duration={500}
+            spy={true}
+            onSetActive={() => setActiveLink("section2")}
+            className={activeLink === "skills" ? "active" : ""}
+          >
             {t("skills")}
           </Link>
         </li>
         <li>
-          <Link to="portfolio" smooth={true} offset={80} duration={500}>
+          <Link
+            to="portfolio"
+            smooth={true}
+            offset={-150}
+            duration={500}
+            spy={true}
+            onSetActive={() => setActiveLink("section2")}
+            className={activeLink === "portfolio" ? "active" : ""}
+          >
             Portfolio
           </Link>
         </li>

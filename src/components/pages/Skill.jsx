@@ -2,10 +2,12 @@ import "../css/Skill.css";
 import { FaReact } from "react-icons/fa";
 import mySkills from "../../util/skills";
 import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
 
 export default function Skill() {
+  const { t } = useTranslation();
   return (
-    <div id="skills" className="skill-container">
+    <div name="skills" id="skills" className="skill-container">
       <div className="overall-skills">
         <div className="icon-container">
           <div className="icons">
@@ -47,15 +49,12 @@ export default function Skill() {
         </div>
         <div className="skill-section">
           <div className="skill">
-            <h1>Skills</h1>
+            <h1>{t("skillsSection")}</h1>
             <div></div>
           </div>
-          <p className="section-p">
-            I have gained experience in building projects with various front end
-            technologies and concepts.
-          </p>
+          <p className="section-p">{t("skillsExplain")}</p>
           <Link smooth={true} offset={80} to="contact">
-            <button>Get in touch</button>
+            <button>{t("getInTouch")}</button>
           </Link>
         </div>
       </div>

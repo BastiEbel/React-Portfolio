@@ -1,20 +1,19 @@
+import { useTranslation } from "react-i18next";
 import blueshadow from "../../assets/logos/Blue_shadow.png";
 import greenshadow from "../../assets/logos/Green shadow.png";
 import project from "../../util/project.js";
 import "../css/PortfolioProject.css";
 
 export default function PortfolioProject() {
+  const { t } = useTranslation();
   return (
-    <article id="portfolio">
+    <article name="portfolio" id="portfolio">
       <section>
         <div className="oversign">
           <span></span>
           <h3>Portfolio</h3>
         </div>
-        <p>
-          Explore a selection of my work here - Interact with projects to see my
-          skills in action.
-        </p>
+        <p>{t("portfolioExplain")}</p>
       </section>
       <img className="side-logo" src={blueshadow} alt="Blue Shadow" />
       <div className="project-section">

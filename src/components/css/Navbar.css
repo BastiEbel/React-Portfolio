@@ -40,6 +40,10 @@
   cursor: pointer;
 }
 
+.nav-links a.active {
+  color: #70e61c;
+}
+
 .menu-icon {
   display: none;
   cursor: pointer;
