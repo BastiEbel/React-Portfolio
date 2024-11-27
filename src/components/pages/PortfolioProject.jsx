@@ -1,11 +1,12 @@
 import { useTranslation } from "react-i18next";
 import blueshadow from "../../assets/logos/Blue_shadow.png";
 import greenshadow from "../../assets/logos/Green shadow.png";
-import project from "../../util/project.js";
 import "../css/PortfolioProject.css";
+import MyProjects from "../../util/project.js";
 
 export default function PortfolioProject() {
   const { t } = useTranslation();
+  const projects = MyProjects();
   return (
     <article name="portfolio" id="portfolio">
       <section>
@@ -18,7 +19,7 @@ export default function PortfolioProject() {
       <img className="side-logo" src={blueshadow} alt="Blue Shadow" />
       <div className="project-section">
         <div className="project-overview">
-          {project.map((singleProject) => (
+          {projects.map((singleProject) => (
             <div className="project-container" key={singleProject.id}>
               <img
                 className="project-image"

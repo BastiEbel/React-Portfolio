@@ -89,7 +89,7 @@ export default function Contact() {
   return (
     <>
       <DialogModal ref={dialogRef} info={policy} impressum={false} />
-      <div id="contact" className="contact-container">
+      <div name="contact" id="contact" className="contact-container">
         <section className="contact-oversign">
           <h1>Contact</h1>
           <span></span>

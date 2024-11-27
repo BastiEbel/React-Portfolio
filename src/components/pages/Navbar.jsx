@@ -13,17 +13,46 @@ function Navbar() {
   const { t } = useTranslation();
 
   useEffect(() => {
-    Events.scrollEvent.register("begin", function () {
-      console.log("begin", arguments);
-    });
+    Events.scrollEvent.register("begin", function () {});
 
-    Events.scrollEvent.register("end", function () {
-      console.log("end", arguments);
-    });
+    Events.scrollEvent.register("end", function () {});
 
     scrollSpy.update();
 
+    const handleScroll = () => {
+      const aboutSection = document.getElementById("about");
+      const skillsSection = document.getElementById("skills");
+      const portfolioSection = document.getElementById("portfolio");
+
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+      if (aboutSection && skillsSection && portfolioSection) {
+        if (
+          scrollPosition >= aboutSection.offsetTop &&
+          scrollPosition < skillsSection.offsetTop
+        ) {
+          setActiveLink("about");
+        } else if (
+          scrollPosition >= skillsSection.offsetTop &&
+          scrollPosition < portfolioSection.offsetTop
+        ) {
+          setActiveLink("skills");
+        } else if (
+          scrollPosition >= portfolioSection.offsetTop &&
+          scrollPosition <
+            portfolioSection.offsetTop + portfolioSection.offsetHeight
+        ) {
+          setActiveLink("portfolio");
+        } else {
+          setActiveLink("");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
     return () => {
+      window.removeEventListener("scroll", handleScroll);
       Events.scrollEvent.remove("begin");
       Events.scrollEvent.remove("end");
     };
@@ -48,7 +77,7 @@ function Navbar() {
             offset={-150}
             duration={500}
             spy={true}
-            onSetActive={() => setActiveLink("section2")}
+            onSetActive={() => setActiveLink("about")}
             className={activeLink === "about" ? "active" : ""}
           >
             {t("about")}
@@ -61,7 +90,7 @@ function Navbar() {
             offset={-80}
             duration={500}
             spy={true}
-            onSetActive={() => setActiveLink("section2")}
+            onSetActive={() => setActiveLink("skills")}
             className={activeLink === "skills" ? "active" : ""}
           >
             {t("skills")}
@@ -71,10 +100,10 @@ function Navbar() {
           <Link
             to="portfolio"
             smooth={true}
-            offset={-150}
+            offset={-140}
             duration={500}
             spy={true}
-            onSetActive={() => setActiveLink("section2")}
+            onSetActive={() => setActiveLink("portfolio")}
             className={activeLink === "portfolio" ? "active" : ""}
           >
             Portfolio
