@@ -6,6 +6,7 @@ import { Link } from "react-scroll";
 import { useEffect, useRef, useState } from "react";
 import DialogModal from "../../ui/DialogModal";
 import policy from "../../util/policyImpressum";
+import { useTranslation } from "react-i18next";
 
 export default function Contact() {
   const [checked, setChecked] = useState(false);
@@ -20,6 +21,8 @@ export default function Contact() {
   const emailRef = useRef(null);
   const messageRef = useRef(null);
   const dialogRef = useRef();
+
+  const { t } = useTranslation();
 
   function openModal(event) {
     event.preventDefault();
@@ -91,21 +94,18 @@ export default function Contact() {
       <DialogModal ref={dialogRef} info={policy} impressum={false} />
       <div name="contact" id="contact" className="contact-container">
         <section className="contact-oversign">
-          <h1>Contact</h1>
+          <h1>{t("conactOversign")}</h1>
           <span></span>
         </section>
         <section className="contact-description">
           <div className="description-explain">
             <div className="description-oversign">
               <span></span>
-              <h3>Got a problem to solve?</h3>
+              <h3>{t("contactQuestion")}</h3>
             </div>
+            <p>{t("contactText")}</p>
             <p>
-              Contact me through this form, I am interested in hearing from you,
-              knowing your ideas and contributing to your projects with my work.
-            </p>
-            <p>
-              Need a Frontend developer? <b>Contact me!</b>
+              {t("contactQuestion1")} <b>{t("contactMe")}</b>
             </p>
           </div>
           <form
@@ -123,7 +123,7 @@ export default function Contact() {
                 }`}
                 type="text"
                 textArea={false}
-                placeholder="Your Name"
+                placeholder={t("name")}
               />
               {(error.email || error.mailIsValid) && (
                 <p className="error-message">
@@ -151,7 +151,7 @@ export default function Contact() {
                 }`}
                 type="text"
                 textArea={true}
-                placeholder="Your Message"
+                placeholder={t("message")}
               />
 
               <span className="police">
@@ -165,16 +165,16 @@ export default function Contact() {
                 </label>
                 <p>
                   <span>
-                    I&apos;ve read the{" "}
+                    {t("contactPolicy")}&nbsp;
                     <a onClick={openModal} href="">
-                      privacy policy
-                    </a>{" "}
-                    and agree to the processing of my data as outlined.
+                      {t("policy")}
+                    </a>
+                    {t("contactPolicy1")}
                   </span>
                 </p>
               </span>
             </div>
-            <button disabled={disabled}>Send Message :)</button>
+            <button disabled={disabled}>{t("btnText")}</button>
           </form>
           <img
             className="image-corner"

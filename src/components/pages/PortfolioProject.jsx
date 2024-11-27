@@ -7,6 +7,7 @@ import MyProjects from "../../util/project.js";
 export default function PortfolioProject() {
   const { t } = useTranslation();
   const projects = MyProjects();
+
   return (
     <article name="portfolio" id="portfolio">
       <section>

@@ -196,7 +196,7 @@ form button {
   padding: 15px 30px 15px 30px;
   gap: 10px;
   border-radius: 10px;
-  font-size: 23px;
+  font-size: 21px;
   font-weight: 400;
   line-height: 27.6px;
   background-color: #70e61c;
@@ -360,13 +360,17 @@ form button:disabled {
     font-size: 12px;
   }
 
+  .police p {
+    height: auto;
+  }
+
   form {
     gap: 20px;
   }
 
   form button {
     width: 80%;
-    font-size: 18px;
+    font-size: 16px;
     height: 35px;
     padding: unset;
     margin-top: 16px;
@@ -378,5 +382,6 @@ form button:disabled {
     display: flex;
     align-items: center;
     justify-content: center;
+    top: 2%;
   }
 }

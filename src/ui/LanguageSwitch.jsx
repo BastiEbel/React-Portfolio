@@ -20,8 +20,8 @@ function LanguageSwitch({ onClick }) {
   return (
     <div>
       <select value={currentLang} onChange={(e) => onChangeLanguageHandler(e)}>
-        <option value="en">Eng</option>
-        <option value="de">De</option>
+        <option value="en">English</option>
+        <option value="de">Deutsch</option>
       </select>
     </div>
   );
